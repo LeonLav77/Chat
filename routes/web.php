@@ -14,12 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/test', function () {
     broadcast(new Hello());
 });
-Route::get('/react', function () {
+Route::get('/{path?}', function () {
     return view('app');
-});
+})->where('path', '.*');
+
+
