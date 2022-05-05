@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-    broadcast(new Hello());
-});
+
+Route::get('/reset/password', function () {
+    return view('app');
+})->name('password.reset');
 Route::get('/{path?}', function () {
     return view('app');
 })->where('path', '.*');

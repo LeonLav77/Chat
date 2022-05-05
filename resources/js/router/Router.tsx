@@ -7,8 +7,9 @@ function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<ChatRoomPage />} />
                 <Route path="chat-room" element={<ChatRoomPage />} />
+                <Route path="c" element={<HomePage />} />
             </Routes>
         </BrowserRouter>
     );
